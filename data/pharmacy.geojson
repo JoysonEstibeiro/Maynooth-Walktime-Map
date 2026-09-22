@@ -1,0 +1,13 @@
+{
+"type": "FeatureCollection",
+"name": "pharmacy",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "id": "1", "name": "Mc Cormack's" }, "geometry": { "type": "Point", "coordinates": [ -6.590239149152808, 53.382023649219441 ] } },
+{ "type": "Feature", "properties": { "id": "2", "name": "McCartan's" }, "geometry": { "type": "Point", "coordinates": [ -6.5822944, 53.3811968 ] } },
+{ "type": "Feature", "properties": { "id": "3", "name": "Callagy's" }, "geometry": { "type": "Point", "coordinates": [ -6.5883375, 53.3803446 ] } },
+{ "type": "Feature", "properties": { "id": "4", "name": "Hickey's Pharmacy" }, "geometry": { "type": "Point", "coordinates": [ -6.5943499, 53.3818007 ] } },
+{ "type": "Feature", "properties": { "id": "5", "name": "Boots" }, "geometry": { "type": "Point", "coordinates": [ -6.5836451, 53.3799834 ] } },
+{ "type": "Feature", "properties": { "id": "6", "name": "St Patrick's Pharmacy" }, "geometry": { "type": "Point", "coordinates": [ -6.5880633, 53.374146 ] } }
+]
+}

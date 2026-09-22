@@ -1,0 +1,9 @@
+{
+"type": "FeatureCollection",
+"name": "MU_Campus_Centroid",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"xy_coordinate_resolution": 1e-15,
+"features": [
+{ "type": "Feature", "properties": { "name": "Maynooth University" }, "geometry": { "type": "Point", "coordinates": [ -6.600738603913031, 53.381620348701198 ] } }
+]
+}

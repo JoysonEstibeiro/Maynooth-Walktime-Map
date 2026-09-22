@@ -1,0 +1,20 @@
+{
+"type": "FeatureCollection",
+"name": "supplies",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "id": "way/30420550", "name": "Tesco Extra" }, "geometry": { "type": "Point", "coordinates": [ -6.581637090047937, 53.380889289049101 ] } },
+{ "type": "Feature", "properties": { "id": "way/30633224", "name": "ALDI" }, "geometry": { "type": "Point", "coordinates": [ -6.596465550003561, 53.381939199607658 ] } },
+{ "type": "Feature", "properties": { "id": "way/31574825", "name": "Lidl" }, "geometry": { "type": "Point", "coordinates": [ -6.589143531950495, 53.369658591208278 ] } },
+{ "type": "Feature", "properties": { "id": "way/41312376", "name": "Centra" }, "geometry": { "type": "Point", "coordinates": [ -6.591939232375531, 53.381488381732289 ] } },
+{ "type": "Feature", "properties": { "id": "way/579222479", "name": "Mróz Maynooth" }, "geometry": { "type": "Point", "coordinates": [ -6.589401461410714, 53.381530858162165 ] } },
+{ "type": "Feature", "properties": { "id": "node/335754695", "name": "SuperValu" }, "geometry": { "type": "Point", "coordinates": [ -6.5883785, 53.3805977 ] } },
+{ "type": "Feature", "properties": { "id": "node/352674189", "name": "Spar" }, "geometry": { "type": "Point", "coordinates": [ -6.5990327, 53.3729834 ] } },
+{ "type": "Feature", "properties": { "id": "node/354880889", "name": "Centra" }, "geometry": { "type": "Point", "coordinates": [ -6.587893, 53.3740636 ] } },
+{ "type": "Feature", "properties": { "id": "node/359968059", "name": "Londis" }, "geometry": { "type": "Point", "coordinates": [ -6.5900296, 53.382008 ] } },
+{ "type": "Feature", "properties": { "id": "node/405712189", "name": "Londis" }, "geometry": { "type": "Point", "coordinates": [ -6.6003621, 53.3841249 ] } },
+{ "type": "Feature", "properties": { "id": "node/1820624178", "name": "I💜Organic" }, "geometry": { "type": "Point", "coordinates": [ -6.5897282, 53.3814286 ] } },
+{ "type": "Feature", "properties": { "id": "node/1858818200", "name": "Totu" }, "geometry": { "type": "Point", "coordinates": [ -6.5919762, 53.3818828 ] } },
+{ "type": "Feature", "properties": { "id": null, "name": "Dunnes" }, "geometry": { "type": "Point", "coordinates": [ -6.594389797284233, 53.382251154662491 ] } }
+]
+}

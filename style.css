@@ -1,0 +1,351 @@
+/* ---------- Layout ---------- */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+#top-bar {
+    background-color: #f2f4f7;
+    border-bottom: 2px solid #b8b8b8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+#top-bar h1 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.title-block {
+    text-align: right;
+}
+
+.byline {
+    font-size: 0.85rem;
+    color: #555;
+    margin-top: 2px;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px 10px;
+    font-size: 1.05rem;
+}
+
+#service-select {
+    font-size: 1.05rem;
+    font-family: inherit;
+    border: 2px solid #3973b6;
+    border-radius: 6px;
+    padding: 4px 10px;
+    background: #fff;
+}
+
+#opacity-slider {
+    width: 110px;
+    cursor: pointer;
+    margin-left: 6px;
+}
+
+#main {
+    display: flex;
+    flex: 1;
+    min-height: 0;
+}
+
+#map {
+    flex: 1;
+    min-width: 0;
+}
+
+/* ---------- Sidebar ---------- */
+#sidebar {
+    width: 300px;
+    flex-shrink: 0;
+    padding: 14px 16px;
+    background: #f9f9f9;
+    border-right: 2px solid #d0d0d0;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+#sidebar h2 {
+    margin: 0 0 12px 0;
+    font-size: 1.15em;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 6px;
+}
+
+#hint {
+    color: #555;
+    font-size: 0.92em;
+    line-height: 1.45;
+}
+
+#avg-row {
+    margin-bottom: 14px;
+    font-size: 0.98em;
+}
+
+.chip {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+    border: 1px solid #888;
+    vertical-align: -2px;
+    margin-right: 4px;
+}
+
+.svc-row {
+    border-left: 5px solid #999;
+    padding: 4px 8px 2px 10px;
+    margin-bottom: 12px;
+    border-radius: 3px;
+    cursor: pointer;
+    background: transparent;
+}
+
+.svc-row:hover {
+    background: #eef2f7;
+}
+
+.svc-row.active {
+    background: #e3ecf7;
+}
+
+.svc-head {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 0.92em;
+}
+
+.svc-name i {
+    width: 18px;
+    text-align: center;
+    color: #444;
+}
+
+.svc-nearest {
+    font-size: 0.82em;
+    color: #555;
+    margin: 2px 0 6px 0;
+}
+
+.bar-outline {
+    position: relative;
+    width: 100%;
+    height: 12px;
+    background-color: #fff;
+    border: 1.5px solid #999;
+    border-radius: 7px;
+    overflow: hidden;
+    margin-bottom: 6px;
+}
+
+.bar-fill {
+    height: 100%;
+    width: 0%;
+    border-radius: 7px 0 0 7px;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.18);
+    transition: width 0.6s ease-in-out, background-color 0.3s;
+}
+
+.bar-marker {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1.5px;
+    background-color: #666;
+    opacity: 0.6;
+    z-index: 2;
+}
+
+#snap-note {
+    font-size: 0.82em;
+    color: #7a4b00;
+    background: #fff5e0;
+    border: 1px solid #f0cf8a;
+    border-radius: 5px;
+    padding: 6px 8px;
+    line-height: 1.4;
+}
+
+.method {
+    margin-top: 22px;
+    font-size: 0.78em;
+    color: #666;
+    line-height: 1.45;
+}
+
+/* ---------- Map bits ---------- */
+.leaflet-control-home {
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    color: #333;
+}
+
+.leaflet-control-home:hover {
+    background-color: #f0f0f0;
+}
+
+.icon-box {
+    background-color: #013621;
+    color: #ffffff;
+    padding: 4px;
+    border-radius: 6px;
+    font-size: 14px;
+    width: 14px;
+    height: 14px;
+    text-align: center;
+    line-height: 14px;
+}
+
+.fa-icon-marker {
+    background: none;
+    border: none;
+}
+
+.dest-wrap {
+    background: none;
+    border: none;
+}
+
+.dest-pulse {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--c, #333);
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.35);
+    animation: pulse 1.6s ease-out infinite;
+}
+
+@keyframes pulse {
+    0%   { box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.35); }
+    70%  { box-shadow: 0 0 0 14px rgba(0, 0, 0, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(0, 0, 0, 0); }
+}
+
+.dest-label {
+    font-weight: 600;
+    font-size: 12px;
+}
+
+/* ---------- Legend ---------- */
+.legend {
+    background: white;
+    padding: 10px 14px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #00000033;
+    font-family: Verdana, sans-serif;
+    font-size: 12px;
+}
+
+.legend h3 {
+    margin: 0 0 8px 0;
+    font-size: 15px;
+}
+
+.legend-container {
+    display: flex;
+    gap: 22px;
+}
+
+.legend-column h4 {
+    margin: 0 0 6px 0;
+    font-size: 12px;
+}
+
+.legend-colors div,
+.legend-services div {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 4px;
+}
+
+.legend-colors span {
+    display: inline-block;
+    width: 20px;
+    height: 12px;
+    border-radius: 2px;
+    border: 1px solid #aaa;
+}
+
+.route-swatch {
+    display: inline-block;
+    width: 16px;
+    height: 4px;
+    border-radius: 2px;
+    margin-left: 2px;
+}
+
+/* ---------- Load error ---------- */
+#load-error {
+    position: fixed;
+    left: 50%;
+    top: 90px;
+    transform: translateX(-50%);
+    z-index: 2000;
+    max-width: 520px;
+    background: #fff3f3;
+    border: 1px solid #e0a0a0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.92em;
+    line-height: 1.45;
+    box-shadow: 0 2px 10px #0003;
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 800px) {
+    #top-bar {
+        padding: 8px 12px;
+    }
+
+        .title-block {
+        text-align: left;
+    }
+
+    #main {
+        flex-direction: column-reverse;
+    }
+
+    #sidebar {
+        width: auto;
+        max-height: 38vh;
+        border-right: none;
+        border-top: 2px solid #d0d0d0;
+    }
+
+    #map {
+        min-height: 50vh;
+    }
+
+    .legend-services {
+        display: none;
+    }
+}
