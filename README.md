@@ -1,5 +1,7 @@
 # Walktime Map: Maynooth
 
+**[View the live map](https://joysonestibeiro.github.io/Maynooth-Walktime-Map/)**
+
 Interactive web map showing how a neighbourhood in Maynooth is, on foot, from five kinds of essential/everyday services:
 Food & Drinks, Fitness, Supplies, Pharmacy and Healthcare (GP).
 
