@@ -322,27 +322,130 @@ body {
 
 /* ---------- Small screens ---------- */
 @media (max-width: 800px) {
+    /* -- Top bar: compact, single row -- */
     #top-bar {
-        padding: 8px 12px;
+        padding: 6px 10px;
+        gap: 4px 10px;
     }
 
-        .title-block {
-        text-align: left;
+    .controls {
+        font-size: 0.9rem;
+        gap: 4px 8px;
     }
 
+    .controls label[for="opacity-slider"] {
+        font-size: 0.8rem;
+    }
+
+    #service-select {
+        font-size: 0.9rem;
+        padding: 3px 6px;
+    }
+
+    #opacity-slider {
+        width: 70px;
+    }
+
+    .title-block {
+        text-align: right;
+        margin-left: auto;
+    }
+
+        #top-bar h1 {
+        font-size: 0.72rem;
+        line-height: 1.1;
+    }
+
+    .byline {
+        font-size: 0.6rem;
+        margin-top: 0px;
+    }
+
+    /* -- Layout: map on top, sidebar below -- */
     #main {
         flex-direction: column-reverse;
     }
 
     #sidebar {
         width: auto;
-        max-height: 38vh;
+        max-height: 34vh;
         border-right: none;
         border-top: 2px solid #d0d0d0;
+        padding: 8px 10px;
+    }
+
+    #sidebar h2 {
+        font-size: 1em;
+        margin: 0 0 6px 0;
+        padding-bottom: 4px;
+    }
+
+    #hint {
+        font-size: 0.82em;
     }
 
     #map {
-        min-height: 50vh;
+        min-height: 52vh;
+    }
+
+    .method {
+        display: none;
+    }
+
+    /* -- Sidebar: two-column grid for service rows -- */
+    #avg-row {
+        margin-bottom: 8px;
+        font-size: 0.88em;
+    }
+
+    #service-rows {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4px 10px;
+    }
+
+    .svc-row {
+        margin-bottom: 4px;
+        padding: 3px 6px 2px 8px;
+        border-left-width: 4px;
+    }
+
+    .svc-head {
+        font-size: 0.78em;
+    }
+
+    .svc-nearest {
+        font-size: 0.7em;
+        margin: 1px 0 3px 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .bar-outline {
+        height: 8px;
+        margin-bottom: 2px;
+    }
+
+    .bar-marker {
+        width: 1px;
+    }
+
+    #snap-note {
+        font-size: 0.72em;
+        padding: 4px 6px;
+        grid-column: 1 / -1;
+    }
+
+    /* -- Legend: hide services column on mobile -- */
+    .legend {
+        padding: 6px 10px;
+        font-size: 10px;
+    }
+
+    .legend h3 {
+        font-size: 12px;
+        margin: 0 0 4px 0;
     }
 
     .legend-services {

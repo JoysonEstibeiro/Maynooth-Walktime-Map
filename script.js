@@ -212,6 +212,10 @@ function updateSidebar(p) {
             `The walk from the centre to that path is not included in these times.`;
     } else {
         note.hidden = true;
+    }     // On mobile, move snap-note inside the service-rows grid so it spans both columns
+    if (window.innerWidth <= 800) {
+        const rows = document.getElementById('service-rows');
+        if (!note.hidden) rows.appendChild(note);
     }
 }
 
